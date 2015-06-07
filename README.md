@@ -1,2 +1,2 @@
-# GD-ManageUsers
-Manages users globally for GlobalDynamics
+# SARAH-ManageUsers
+Manages users globally for SARAH
