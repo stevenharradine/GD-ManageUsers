@@ -57,3 +57,23 @@ MODIFY `USER_ID` int(5) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=11;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+
+
+--
+-- INSERT User/Pass - douglas/fargo
+--
+INSERT INTO `users` (
+	`USER_ID`,
+	`user_type`,
+	`username`,
+	`hash_algorithm`,
+	`salt`,
+	`password`
+) VALUES (
+	1,
+	'ADMIN',
+	'douglas',
+	'SHA256',
+	'HjgawkNjtbanNZ8KBx3Er9xPRjHaGLCXSGExofDVQhBT1uGbK7kZSr+oC+RtZqnDN79XH228wxsJi8+R0gat/g==',
+	'51bee9acdef40861896bfeb04cc3c6a3f0ba6392a2500e77e84949f3cea6526c'
+);
