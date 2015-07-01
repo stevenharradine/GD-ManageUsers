@@ -2,7 +2,7 @@
 - hosts: localhost
   sudo: true
   remote_user: douglas
-  roles:
+  tasks:
     - name: install software | apt
       apt:
         pkg: "{{ item }}"
