@@ -1,0 +1,15 @@
+---
+- hosts: localhost
+  sudo: true
+  remote_user: douglas
+  roles:
+    - name: install software | apt
+      apt:
+        pkg: "{{ item }}"
+        state: latest
+        update_cache: yes
+      with_items:
+        - php5-mcrypt
+
+    - name: enable mcrypt
+      command: php5enmod mcrypt
