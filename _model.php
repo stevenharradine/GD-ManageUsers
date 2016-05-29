@@ -1,21 +1,25 @@
 <?php
 	class UserManager {
 		public function getRecord ($id) {
+			global $link;
+			
 			$sql = <<<EOD
 	SELECT *
 	FROM `users`
 	WHERE `USER_ID`='$id'
 EOD;
-			$data = mysql_query($sql) or die(mysql_error());
-			return mysql_fetch_array( $data );
+			$data = mysqli_query($link, $sql) or die(mysqli_error());
+			return mysqli_fetch_array( $data );
 		}
 
 		public function getAllRecords () {
+			global $link;
+
 			$sql = <<<EOD
 	SELECT *
 	FROM `users`
 EOD;
-			$data = mysql_query($sql) or die(mysql_error());
+			$data = mysqli_query($link, $sql) or die(mysqli_error());
 
 			return $data;
 		}
