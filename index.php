@@ -50,11 +50,11 @@
 
 		$tableView = new TableView ( array ('View', '') );
 
-		while (($users_row = mysql_fetch_array( $users_data ) ) != null) {
+		for ($i = 0; $i <= count ($users_data) - 1; $i++) {
 			$tableView->addRow ( array (
-				TableView::createCell ('user_type', $users_row['user_type'] ),
-				TableView::createCell ('username', $users_row['username'] ),
-				TableView::createEdit ($users_row['USER_ID']),
+				TableView::createCell ('user_type', $users_data[$i]['user_type'] ),
+				TableView::createCell ('username', $users_data[$i]['username'] ),
+				TableView::createEdit ($users_data[$i]['USER_ID']),
 			));
 		}
 
@@ -64,4 +64,3 @@
 		
 		include '../../views/_generic.php';
 	}
-?>
